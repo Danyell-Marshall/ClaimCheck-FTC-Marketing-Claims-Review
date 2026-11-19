@@ -24,13 +24,17 @@ This is a new, independently built Google Apps Script project informed by that e
 
 The editor makes the final decision; the software makes the questions difficult to overlook.
 
-## Interface preview
+## Live application screenshots
 
-The images below are **local browser previews with synthetic data and a mocked Google Sheets bridge**, not screenshots of the app deployed inside a real Google account. After installing, capture the actual Google Sheet and replace these images before publishing your personal blog.
+These screenshots show ClaimCheck **running inside Google Sheets** with **fictional test copy**, not customer or employer material. The sidebar displays the actual review findings; the review-history tab records the rule-based runs and optional Gemini attempt. Browser chrome containing account information has been cropped out.
 
-![ClaimCheck paste-and-review sidebar — local simulated preview](screenshots/01-sidebar-local-preview.png)
+![Live FTC ClaimCheck sidebar displaying three flagged review points beside the findings spreadsheet](screenshots/03-live-claims-review.png)
 
-![ClaimCheck rule findings — local simulated preview](screenshots/02-findings-local-preview.png)
+![Live ClaimCheck review history logging the original and regression-test runs](screenshots/04-live-review-history.png)
+
+The original test flagged two potential claims; a later rule change detected a third, previously missed customer earnings claim. These are **possible editorial review issues**, not findings of illegality. The Gemini second pass returned zero additional suggestions in the most recent test; its successful execution has **not** been independently confirmed.
+
+For historical reference, the project also includes simulated browser previews in `screenshots/01-sidebar-local-preview.png` and `screenshots/02-findings-local-preview.png`.
 
 ## Install it in Google Sheets (no terminal required)
 
@@ -107,7 +111,7 @@ ReviewSidebar.html            Pasted-copy UI built with HTML/CSS/JavaScript
 appsscript.json               Apps Script V8 manifest
 examples/sample-marketing-copy.txt
 examples/example-findings.csv Synthetic example output (not legal results)
-screenshots/*.png             Browser UI preview with simulated Google API response
+screenshots/*.png             Live Google Sheets captures and labeled local browser previews
 docs/architecture.md          Workflow, permissions, privacy and data design
 docs/ftc-guidance-map.md      Rule categories, sources and limitations
 docs/test-results.md          Recorded test scope and results
@@ -125,7 +129,7 @@ node --test tests/*.test.cjs
 
 The Node suite exercises actual `Rules.gs` code and uses mock Google Sheets services to test review persistence. You can also run **FTC ClaimCheck → Run Self-Tests** inside Google Sheets after installing the project. See [`docs/test-results.md`](docs/test-results.md) for what has and has not been verified.
 
-**A passing pattern test is not a legal-accuracy benchmark.** This code has not been evaluated against a labeled dataset of FTC enforcement findings, and its live Google Sheets/Gemini behavior must be verified in a real account after installation.
+**A passing pattern test is not a legal-accuracy benchmark.** This code has not been evaluated against a labeled dataset of FTC enforcement findings. In November 2026, a live Google Sheets test confirmed the sidebar, rule-based analysis, saved review records, and findings persistence with fictional copy. The Gemini second pass has not yet been conclusively verified.
 
 ## Portfolio framing
 

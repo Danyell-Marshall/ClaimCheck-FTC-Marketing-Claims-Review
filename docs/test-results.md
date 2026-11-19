@@ -15,26 +15,18 @@ Run `node --test tests/*.test.cjs` from the repository root.
 
 A Chromium browser executed `ReviewSidebar.html` with an explicitly simulated `google.script.run` backend. The form rendered, accepted fictional marketing copy, updated the character count, handled a submit interaction and displayed the returned review cards. See `screenshots/`. The preview uses a simulated Google bridge and **does not prove** Apps Script authorization, Sheets permissions, data writing inside Google, or Gemini API connectivity.
 
-## Not yet run / not proven
+## Live Google Sheets testing (November 18–19, 2026)
 
-- No live install and user authorization inside the owner's Google Sheets account.
-- No real Gemini API request, billing/quota check, or model-availability check.
-- No end-to-end test using real spreadsheet permissions and review status editing.
-- No externally validated precision/recall measurement or comprehensive legal rule-set audit.
-- No review of layouts, adjacent images, disclosures, or the net impression of an actual ad.
+Using fictional marketing copy, the owner tested ClaimCheck in a real, container-bound Google spreadsheet. The application showed its custom menu and sidebar, and the initial self-test reported **11 checks passed**. After a `CUSTOMER_EARNINGS` rule revision, the subsequent test review produced three high-priority editorial review points instead of two. The original test and subsequent runs were preserved as distinct records in `ClaimCheck_Reviews`, and individual excerpts were written into `ClaimCheck_Findings`. The first test review also showed the reviewer-status dropdown. See `screenshots/03-live-claims-review.png` and `screenshots/04-live-review-history.png`.
 
-## First live smoke test to perform after installation
+The owner also enabled the optional Gemini pass. An earlier attempt logged HTTP 404; a subsequent attempt logged no error but returned **0 AI suggestions**. This is not proof of successful Gemini inference because zero suggestions may also result from filtering or an unobserved failure path. API integration and status reporting still need an independent diagnostic test.
 
-1. Create the new Sheet and paste Apps Script files per README.
-2. Reload to verify `FTC ClaimCheck` menu appears.
-3. Use `FTC ClaimCheck → Run Self-Tests`; expect **12 checks passed**.
-4. Open `Paste Copy & Review` and paste the fictional sample from `examples/sample-marketing-copy.txt`.
-5. Verify `ClaimCheck_Reviews` has one row with timestamp, ID, summary and full pasted copy.
-6. Verify `ClaimCheck_Findings` has individual rows with excerpts, FTC links, reviewer statuses and editable notes.
-7. Review a harmless sample and confirm the app doesn't label it compliant.
-8. Only if desired, configure Gemini in Script Properties and perform one **consented** test with fictional, non-sensitive copy.
+## Still not proven
 
-If any of those checks fail, do not describe the Google Sheets app as fully deployed or operational in public materials until repaired.
+- End-to-end AI suggestion generation from the live Gemini API.
+- Comprehensive legal accuracy, precision/recall, or the correctness of any legal conclusion.
+- Disclosure visibility or net impression involving page design, neighboring imagery, or context.
+- Production-readiness for external users, billing/performance at scale, or authorization outside the author's own spreadsheet.
 
 ## November 2026 customer earnings regression test
 
