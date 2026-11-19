@@ -1,0 +1,190 @@
+TAP version 13
+# Subtest: Flags absolute guarantee
+ok 1 - Flags absolute guarantee
+  ---
+  duration_ms: 6.578694
+  type: 'test'
+  ...
+# Subtest: Flags specific earnings promise
+ok 2 - Flags specific earnings promise
+  ---
+  duration_ms: 2.009111
+  type: 'test'
+  ...
+# Subtest: Flags non-dollar customer income doubling claim (regression)
+ok 3 - Flags non-dollar customer income doubling claim (regression)
+  ---
+  duration_ms: 0.224719
+  type: 'test'
+  ...
+# Subtest: Flags percentage-based customer revenue growth
+ok 4 - Flags percentage-based customer revenue growth
+  ---
+  duration_ms: 0.189847
+  type: 'test'
+  ...
+# Subtest: Flags customer-first financial outcome in reverse order
+ok 5 - Flags customer-first financial outcome in reverse order
+  ---
+  duration_ms: 0.27177
+  type: 'test'
+  ...
+# Subtest: Does not flag neutral customer service description as earnings outcome
+ok 6 - Does not flag neutral customer service description as earnings outcome
+  ---
+  duration_ms: 0.166661
+  type: 'test'
+  ...
+# Subtest: Original multi-sentence example yields three independent high-priority review flags
+ok 7 - Original multi-sentence example yields three independent high-priority review flags
+  ---
+  duration_ms: 9.565769
+  type: 'test'
+  ...
+# Subtest: Flags health efficacy language
+ok 8 - Flags health efficacy language
+  ---
+  duration_ms: 0.290257
+  type: 'test'
+  ...
+# Subtest: Flags results testimonial
+ok 9 - Flags results testimonial
+  ---
+  duration_ms: 0.749761
+  type: 'test'
+  ...
+# Subtest: Flags affiliate relationship
+ok 10 - Flags affiliate relationship
+  ---
+  duration_ms: 0.990444
+  type: 'test'
+  ...
+# Subtest: Flags superlative
+ok 11 - Flags superlative
+  ---
+  duration_ms: 0.398891
+  type: 'test'
+  ...
+# Subtest: Flags free trial
+ok 12 - Flags free trial
+  ---
+  duration_ms: 0.256587
+  type: 'test'
+  ...
+# Subtest: Flags limited inventory
+ok 13 - Flags limited inventory
+  ---
+  duration_ms: 0.168604
+  type: 'test'
+  ...
+# Subtest: Flags environmental claim
+ok 14 - Flags environmental claim
+  ---
+  duration_ms: 0.158479
+  type: 'test'
+  ...
+# Subtest: Flags AI automation promise
+ok 15 - Flags AI automation promise
+  ---
+  duration_ms: 0.140402
+  type: 'test'
+  ...
+# Subtest: Flags absolute security promise
+ok 16 - Flags absolute security promise
+  ---
+  duration_ms: 0.167663
+  type: 'test'
+  ...
+# Subtest: Neutral editorial sentence gives no flags
+ok 17 - Neutral editorial sentence gives no flags
+  ---
+  duration_ms: 0.13277
+  type: 'test'
+  ...
+# Subtest: Empty copy is rejected
+ok 18 - Empty copy is rejected
+  ---
+  duration_ms: 0.51746
+  type: 'test'
+  ...
+# Subtest: Overlength copy is rejected
+ok 19 - Overlength copy is rejected
+  ---
+  duration_ms: 0.16588
+  type: 'test'
+  ...
+# Subtest: Evidence links resolve to FTC domain
+ok 20 - Evidence links resolve to FTC domain
+  ---
+  duration_ms: 0.153822
+  type: 'test'
+  ...
+# Subtest: Findings include actionable question, excerpt, and origin
+ok 21 - Findings include actionable question, excerpt, and origin
+  ---
+  duration_ms: 0.160892
+  type: 'test'
+  ...
+# Subtest: Handles quotes containing special HTML characters as plain text
+ok 22 - Handles quotes containing special HTML characters as plain text
+  ---
+  duration_ms: 0.144798
+  type: 'test'
+  ...
+# Subtest: No duplicate finding per category and sentence
+ok 23 - No duplicate finding per category and sentence
+  ---
+  duration_ms: 0.150808
+  type: 'test'
+  ...
+# Subtest: Pattern rules are maintained as twelve categories
+ok 24 - Pattern rules are maintained as twelve categories
+  ---
+  duration_ms: 0.105238
+  type: 'test'
+  ...
+# Subtest: Review creates sheets, logs a review and actionable findings
+ok 25 - Review creates sheets, logs a review and actionable findings
+  ---
+  duration_ms: 12.048995
+  type: 'test'
+  ...
+# Subtest: A neutral draft is logged but never called compliant
+ok 26 - A neutral draft is logged but never called compliant
+  ---
+  duration_ms: 1.650079
+  type: 'test'
+  ...
+# Subtest: Formula-looking copy and title are kept as text in Sheets
+ok 27 - Formula-looking copy and title are kept as text in Sheets
+  ---
+  duration_ms: 2.218957
+  type: 'test'
+  ...
+# Subtest: Invalid URL fails without writing data
+ok 28 - Invalid URL fails without writing data
+  ---
+  duration_ms: 2.153929
+  type: 'test'
+  ...
+# Subtest: Gemini failure does not erase rule findings or leak a key
+ok 29 - Gemini failure does not erase rule findings or leak a key
+  ---
+  duration_ms: 3.112635
+  type: 'test'
+  ...
+# Subtest: Blank copy is rejected before any sheets are created
+ok 30 - Blank copy is rejected before any sheets are created
+  ---
+  duration_ms: 1.180341
+  type: 'test'
+  ...
+1..30
+# tests 30
+# suites 0
+# pass 30
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 106.309241
